@@ -1,3 +1,225 @@
-main {
-    background-color: aqua;
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(./pictures/4249454.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: linear-gradient(135deg, #2e004f, #1a1a40);
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    /* border: 2px solid blue ; */
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: background-color 2s ease-out;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+}
+
+.question h2 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border:2px solid #b380ff;
+    color: #fff;
+}
+
+button:hover {
+    background-color: black;
+}
+
+
+.questionsAndAnswers {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 700px;
+}
+
+.I3quiz {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    /* margin: auto; */
+    width: 50%;
+    border: 2px solid #b380ff ;
+    border-radius: 10px;
+}
+
+.questionsNumber {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-around;
+    
+}
+
+.questionsNumber button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border:2px solid #b380ff;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+.highlight {
+    background-color:#a8ffb0 !important;
+    color: black !important;
+}
+
+
+.answer div {
+    display: inline-flex;
+    /* width: 600px; */
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 300px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-out;
+    border-radius: 20px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+
+#showResult:disabled {
+   background-color: #4b3832;
+   color: white;
+}
+
+
+#showResult {
+    background-color: #a8ffb0;
+    color: black;
+}
+
+#results {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 768px){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+    }
+
+    label {
+        width: 50px;
+        height: 30px;
+    }
+
+    .I3quiz {
+        height: 100vh; /* Uvijek zauzima cijeli vidljivi dio prozora */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .question h2{
+        font-size: 1.2em;
+    }
+
+    .questionsNumber{
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+    .questionsNumber button {
+        width: 50px;
+        height: 30px; 
+    }
+
+    .questionsAndAnswers {
+        width: auto;
+        flex-grow: 1; /* Povećava element prema dostupnom prostoru */
+    }
+
+    .answer div {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .anser {
+        margin-bottom: 10px;
+    }
+
+    #results {
+        display: flex;
+        justify-content: center;
+        overflow-y: auto; /* Omogućuje skrolanje ako sadržaj prelazi visinu */
+        width: 100%;
+        height: auto;
+        max-height:80vh ;
+    }
+
+    #allResult h2{
+        margin: 0;
+    }
+
+    #allResult p {
+        margin: 0;
+    }
+
+
 }

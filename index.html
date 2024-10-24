@@ -8,8 +8,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="quiz">
-        <h1>I3 Quiz App</h1>
+    <div>
+        <h1>Info3 App Quiz</h1>
+    </div>
+    <main class="I3quiz">
+        <div class="questionsNumber" id="questionNumber"> 
+        </div>
+        <div class="questionsAndAnswers">
+            <div class="buttons">
+                <button id="previous" onclick="previousQuestion()">PREVIOUS</button>
+                <button onclick="nextQuestion()" id="next">NEXT</button>
+                <button id="showResult" onclick="showResult()">SHOW RESULT</button>
+            </div>
+            <div class="question" id="question">
+            </div>
+            <div class="answer" id="answer">
+            </div>
+            <div id="alert">
+            </div>
+            <div id="results">
+            </div>
+        </div>
     </main>
 </body>
 </html>
